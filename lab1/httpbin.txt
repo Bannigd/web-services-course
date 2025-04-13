@@ -1,0 +1,14 @@
+{
+  "args": {
+    "x": "1", 
+    "y": "2"
+  }, 
+  "headers": {
+    "Accept": "*/*", 
+    "Host": "httpbin.org", 
+    "User-Agent": "curl/8.9.1", 
+    "X-Amzn-Trace-Id": "Root=1-67e8e49d-70bbc4e5247d825d60d1c0f2"
+  }, 
+  "origin": "79.139.205.133", 
+  "url": "http://httpbin.org/get?x=1&y=2"
+}
