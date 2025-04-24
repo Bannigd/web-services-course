@@ -4,7 +4,6 @@
 /lab1/pandoc/*
 
 homework/test
-homework/report
 
 homework/app/static/*
 homework/app/.venv
