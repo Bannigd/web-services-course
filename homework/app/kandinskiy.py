@@ -113,6 +113,6 @@ if __name__ == "__main__":
     request_id = api.send_prompt(**prompt_params)
     image = api.get_image(request_id)[0]
 
-    with open(f"./images/{request_id}.png", "wb") as f:
+    with open(f"./static/{request_id}.png", "wb") as f:
         f.write(base64.b64decode(image))
         print(f"saved in {request_id}.png")
