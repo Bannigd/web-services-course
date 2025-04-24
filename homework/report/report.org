@@ -70,7 +70,7 @@ curl --location 'https://api-key.fusionbrain.ai/key/api/v1/pipelines' \
 Основное поле запроса выглядит следующим образом:
 
 #+begin_src json
-{ppp
+{
   "type": "GENERATE", 
   "style": "string",
   "width": 1024,
