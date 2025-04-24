@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kandinkskiy Mirror</title>
+  </head>
+  <body>
+    <h1>Сгенерированное изображение:</h1>
+    <img src="{{url_for('static', filename=image_name)}}">
+    <form action="/" method="GET">
+      <input type="submit" value="Вернуться на главную">
+    </form>
+  </body>
+</html>
