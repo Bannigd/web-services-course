@@ -3,5 +3,13 @@
 \#*\#
 /lab1/pandoc/*
 
-# homework will have separate repository
-homework 
+homework/test
+homework/report
+
+homework/app/static/*
+homework/app/.venv
+homework/app/.env
+homework/app/.flask_env
+homework/app/TAGS
+
+__pycache__
