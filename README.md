@@ -29,4 +29,4 @@
 
 ## Домашние задания
 
-Смотреть [здесь](./homework/report/report.org)
+* Информация по первой части: [текст](./homework/report/report.org) и [презентация](./homework/report/presentation.odp). Инструкция по запуску сервиса на локальном компьютере [здесь](./homework/app/SETUP.md)
