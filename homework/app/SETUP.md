@@ -19,13 +19,17 @@ KAND_SECRET=<Секретный ключ>
 3. Создадим секретный ключ для Flask и запишем в файл `.flask_env`: 
 
 ```bash
-python -c 'import secrets; print(secrets.token_hex())' > .flask_env
+python -c 'import secrets; print(f"SECRET_KEY={secrets.token_hex()}")' > .flask_env
 ```
 
-4. Теперь все готово к запуску:
+4. Создадим директорию `static`, где будут храниться изображения:
+```bash
+mkdir static
+```
+
+5. Теперь все готово к запуску:
 
 ```bash
 python app.py
 ```
-
 
