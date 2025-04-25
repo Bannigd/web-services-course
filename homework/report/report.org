@@ -120,7 +120,7 @@ curl --location 'https://api-key.fusionbrain.ai/key/api/v1/pipeline/run' \
 #+begin_src json
   {
     "status":"INITIAL",
-    "uuid":"e2070492-7336-4227-ae2f-8dbdb77d3b96",
+    "uuid":"<uuid>",
     "status_time":17
   }
 #+end_src
@@ -139,15 +139,15 @@ curl --location 'https://api-key.fusionbrain.ai/key/api/v1/pipeline/run' \
 
 #+begin_src json
   {
-    "uuid": "<uuid>",
-    "status": "INITIAL"
-}
+      "uuid": "<uuid>",
+      "status": "INITIAL"
+  }
 #+end_src
 
 Здесь =uuid= имеет такое же значение, как указанное при запросе. Когда поле =status= будет иметь значение "DONE", то мы получим и само изображение:
 #+begin_src json
     {
-      "uuid": "03e5ec58-1c3d-4c4c-bf9e-b8afa2615fe0",
+      "uuid": "<uuid>",
       "status": "DONE",
       "result": {
           "files": [
