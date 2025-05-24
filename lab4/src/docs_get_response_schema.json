@@ -1,0 +1,139 @@
+{
+    "type": "object",
+    "properties": {
+	"response": {
+	    "type": "object",
+	    "properties": {
+		"count": {
+		    "type": "integer",
+		    "description": "Количество элементов в массиве \"items\"",
+		    "minimum": 0
+		},
+		"items": {
+		    "type": "array",
+		    "description": "Массив объектов файлов",
+		    "items": {
+			"$ref": "#/definitions/object_file"
+		    }
+		}
+	    }
+	}
+    },
+    "required": [
+	"response"
+    ],
+    "additionalProperties": false,
+    "definitions": {
+	"object_file":{
+	    "type": "object",
+	    "description": "Объект, описывающий файл",
+	    "properties": {
+		"id": {
+		    "type": "integer",
+		    "description": "Идентификатор файла"
+		},
+		"owner_id": {
+		    "type": "integer",
+		    "description": "Идентификатор пользователя, загрузившего файл"
+		},
+		"title": {
+		    "type": "string",
+		    "description": "Название файла"
+		},
+		"size": {
+		    "type": "integer",
+		    "description": "Размер файла в байтах"
+		},
+		"ext": {
+		    "type": "string",
+		    "description": "Расширение файла"
+		},
+		"url": {
+		    "type": "string",
+		    "description": "Адрес файла, по которому его можно загрузить"
+		},
+		"date": {
+		    "type": "integer",
+		    "description": "Дата добавления в формате Unixtime"
+		},
+		"type": {
+		    "type": "integer",
+		    "description": "Тип файла. Возможные значения:1 — текстовые документы; 2 — архивы; 3 — gif; 4 — изображения; 5 — аудио; 6 — видео; 7 — электронные книги; 8 — неизвестно.",
+		    "minimum": 1,
+		    "maximum": 8
+		},
+		"preview": {
+		    "type": "object",
+		    "description": "Информация для предварительного просмотра файла.",
+		    "properties": {
+			"photo": {
+			    "type": "object",
+			    "properties": {
+				"sizes": {
+				    "type": "array",
+				    "items": {
+					"type": "object",
+					"properties": {
+					    "src": {
+						"type": "string"
+					    },
+					    "width": {
+						"type": "integer",
+						"mininum": 0
+					    },
+					    "height": {
+						"type": "integer",
+						"mininum": 0
+					    },
+					    "type": {
+						"enum": ["s", "m", "x", "o", "p", "q", "r", "y", "z", "w"]
+					    }
+					}
+				    }
+				}
+			    }
+			},
+			"graffiti": {
+			    "type": "object",
+			    "properties": {
+				"src": {
+				    "type": "string"
+				},
+				"width": {
+				    "type": "integer",
+				    "minimum": 0
+				},
+				"height": {
+				    "type": "integer",
+				    "minimum": 0
+				}
+			    }
+			},
+			"audio_message": {
+			    "type": "object",
+			    "properties": {
+				"duration": {
+				    "type": "integer"
+				},
+				"waveform": {
+				    "type": "array",
+				    "items": {
+					"type": "integer"
+				    }
+				},
+				"link_ogg": {
+				    "type": "string"
+				},
+				"link_mp3": {
+				    "type": "string"
+				}
+			    }
+			}
+		    }
+		}
+	    }
+	}
+    }
+
+}
+
